@@ -1,0 +1,9 @@
+C:\Users\steve\OneDrive\Documents\udemy\JQueryMaster\JQueryMaster\bin\JQueryMaster.dll.config
+C:\Users\steve\OneDrive\Documents\udemy\JQueryMaster\JQueryMaster\bin\JQueryMaster.dll
+C:\Users\steve\OneDrive\Documents\udemy\JQueryMaster\JQueryMaster\bin\JQueryMaster.pdb
+C:\Users\steve\OneDrive\Documents\udemy\JQueryMaster\JQueryMaster\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\steve\OneDrive\Documents\udemy\JQueryMaster\JQueryMaster\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\steve\OneDrive\Documents\udemy\JQueryMaster\JQueryMaster\obj\Debug\JQueryMaster.csprojResolveAssemblyReference.cache
+C:\Users\steve\OneDrive\Documents\udemy\JQueryMaster\JQueryMaster\obj\Debug\JQueryMaster.csproj.CoreCompileInputs.cache
+C:\Users\steve\OneDrive\Documents\udemy\JQueryMaster\JQueryMaster\obj\Debug\JQueryMaster.dll
+C:\Users\steve\OneDrive\Documents\udemy\JQueryMaster\JQueryMaster\obj\Debug\JQueryMaster.pdb

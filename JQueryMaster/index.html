@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Coding Revolution</title>
+    <style>
+        .container {
+            width: 900px;
+            margin: 25px auto;
+        }
+
+        .tab_header .item {
+            float: left;
+            border: 1px solid #cccccc;
+            box-sizing: border-box;
+            padding: 10px;
+            margin-bottom: 10px;
+            background: lightgray;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.5s ease;
+        }
+
+
+        .item.active {
+            background: #0026ff;
+            color: white;
+        }
+
+        .tab_header:after {
+            content: "";
+            display: table;
+            clear: both
+        }
+
+        .tab_container .container_item {
+            border: 1px solid #cccccc;
+            box-sizing: border-box;
+            padding: 20px;
+            display: none;
+        }
+
+        .tab_container .container_item.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="tab_header">
+            <div class="item active" data-option="1" >Option 1</div>
+            <div class="item" data-option="2">Option 2</div>
+            <div class="item" data-option="3">Option 3</div>
+        </div>
+
+        <div class="tab_container">
+            <div class="container_item active" data-item="1">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu velit eleifend, rutrum erat tincidunt, interdum risus. Sed vestibulum magna mollis, ullamcorper nulla non, condimentum diam. Ut iaculis, lectus vel suscipit egestas, lacus erat porttitor dui, id fringilla ipsum dolor vehicula massa. Sed tristique tortor vitae purus ultricies cursus.
+            </div>
+
+            <div class="container_item" data-item="2">
+                Pellentesque sed rutrum arcu. Aliquam ac diam gravida, porta est at, molestie est. Integer tincidunt semper mauris a ultricies. Aliquam erat volutpat. Proin nec nunc aliquet, luctus metus eget, feugiat arcu. Sed vitae auctor dolor. In nec nulla vestibulum, placerat ipsum maximus, cursus nisi. Nulla mollis ullamcorper lacinia. Donec imperdiet tincidunt molestie. Curabitur lobortis diam urna, at consequat massa commodo sit amet.
+            </div>
+
+            <div class="container_item" data-item="3">
+                Aliquam porta risus velit, et suscipit sapien consequat a. Mauris faucibus elit sit amet elit consequat, ut tincidunt massa aliquam. Donec in sagittis magna. Integer sollicitudin ante tellus, id elementum felis dignissim eu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent eu eros ante. Donec condimentum et libero in consequat. Nunc placerat placerat hendrerit. Fusce at maximus enim. Duis volutpat justo libero, ac fringilla tellus egestas posuere. Pellentesque rhoncus condimentum mollis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In vel lectus eget lorem eleifend posuere quis quis lorem. Sed dictum felis et hendrerit tincidunt. Donec commodo non ante in ullamcorper.
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="JavaScript.js"></script>
+</body>
+</html>

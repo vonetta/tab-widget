@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .red {
+            background-color: red;
+            color: white;
+        }
+
+        .blue {
+            background-color: blue;
+            color: white;
+        }
+
+        .green {
+            background-color: green;
+            color: white;
+        }
+
+        .yellow {
+            background-color: yellow;
+            color: black;
+        }
+
+        .item {
+            margin: 20px;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Cloning</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="item red" id="red">
+                    Red
+                </div>
+                <div class="item blue" id="blue">
+                    Blue
+                </div>
+                <div class="item green" id="green">
+                    Green
+                </div>
+                <div class="item yellow" id="yellow">
+                    Yellow
+                </div>
+
+
+            </div>
+            <div class="col-sm-offset-2 col-sm-4" id="cloneHere">
+            </div>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://sabioapi2.azurewebsites.net/scripts/sabio.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $("#red").click(function () {
+                $('#red').clone().appendTo('#cloneHere');
+            });
+
+            $("#blue").click(function () {
+                $('#blue').clone().appendTo('#cloneHere');
+            });
+
+            $("#green").click(function () {
+                $('#green').clone().appendTo('#cloneHere');
+            });
+
+            $("#yellow").click(function () {
+                $('#yellow').clone().appendTo('#cloneHere');
+            });
+
+
+            //this way removes all the yellows all together
+            $("#cloneHere").click(function () {
+             console.log("clicking")
+             $("#yellow").html(" ");
+            });
+
+
+            //$("#cloneHere").on("click", ".item", function () {
+             //   $(this).remove()
+           // })
+        
+
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
