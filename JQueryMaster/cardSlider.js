@@ -1,7 +1,9 @@
 ﻿$(document).ready(function () {
 
-    var itemLength = $('.cards_container item').length;
+    var itemLength = $('.cards_container .item').length;
     var current = 1;
+
+    $('.total_slides').text(itemLength);
 
     $('.cardSlider .btn_prev').on("click", function () {
         console.log('go to previous')
@@ -32,6 +34,8 @@
     function showSlider(current) {
         $(".cards_container .item").removeClass("active");
         $("div[data-id='" + current + "']").addClass("active");
+
+        $(".current_slide").text(current);
     }
 
 });

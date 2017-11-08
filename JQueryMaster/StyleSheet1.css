@@ -9,45 +9,54 @@
 .cards_container {
     box-sizing: border-box;
     width: 80%;
-    height:300px;
+    height: 300px;
     margin: 0 auto;
     background: #ececec;
 }
 
     .cards_container .item {
-    height: 300px;
-    display:none;
-    
+        height: 300px;
+        display: none;
     }
 
-    .cards_container .item.active{
-
-        display:block; 
-        padding: 20px;
-    }
+        .cards_container .item.active {
+            display: block;
+            padding: 20px;
+        }
 
 .action_btns {
-position:absolute;
-top: 110px;
-width: 100%;
+    position: absolute;
+    top: 110px;
+    width: 100%;
 }
 
     .action_btns .btn {
-    
-    width: 50px;
-    height: 50px;
-    padding: 0px;
-    font-size: 50px;
-    color: #2f6cbe;
+        width: 50px;
+        height: 50px;
+        padding: 0px;
+        font-size: 50px;
+        color: #2f6cbe;
     }
 
         .action_btns .btn.btn_prev {
-        float:left;
-        
+            float: left;
         }
 
         .action_btns .btn.btn_next {
-        float:right;
+            float: right;
         }
 
+.count_slide {
+    width: 140px;
+    background: #0275d8;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    float: right;
+}
 
+    .count_slide span {
+    
+    font-weight:bold;
+    }
