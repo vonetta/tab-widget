@@ -80,6 +80,9 @@
     <Content Include="HtmlPage1.html" />
     <Content Include="index.html" />
     <Content Include="JavaScript.js" />
+    <Content Include="jQueryUI\index.html" />
+    <Content Include="jQueryUI\main.js" />
+    <Content Include="jQueryUI\style.css" />
     <Content Include="overlay\overlay.css" />
     <Content Include="overlay\overlay.html" />
     <Content Include="overlay\overlay.js" />
