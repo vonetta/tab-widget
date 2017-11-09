@@ -36,7 +36,7 @@
         this.showNext = function (next) {
             var wrapper = next.find(".wrapper");
 
-            wrapper.fadeIn("500", function () {
+            wrapper.fadeIn("300", function () {
                 manageOptions(next);
             })
          };
@@ -47,8 +47,8 @@
             var counter = 0;
 
             childrens.each(function (i, element) {
-                $(element).delay(counter).fadeIn(300);
-                counter += 500;
+                $(element).delay(counter).fadeIn(200);
+                counter += 250;
             });
 
             childrens.on("click", function () {

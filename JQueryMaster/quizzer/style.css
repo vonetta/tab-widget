@@ -67,6 +67,9 @@ height: 200px;
         .options div.active {
         color: #007fff;
         background: #313131;
+        border-radius: 10px;
+        padding: 10px;
+        color: #fff;
         }
 
 .next_question {
@@ -76,7 +79,7 @@ cursor: pointer;
 /*progress bar command error*/
 .error {
     position: fixed;
-    bottom: 15px;
+    bottom: 30px;
     width: 100%;
     color: #f44336;
     font-weight: bold;
@@ -92,7 +95,8 @@ width: 100%;
 }
 
 .bar {
-width: 25%;
-height: 5px;
+width: 10%;
+height: 20px;
 background: #00bcd4;
+
 }
