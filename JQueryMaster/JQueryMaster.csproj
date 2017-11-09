@@ -86,6 +86,9 @@
     <Content Include="overlay\overlay.css" />
     <Content Include="overlay\overlay.html" />
     <Content Include="overlay\overlay.js" />
+    <Content Include="quizzer\index.html" />
+    <Content Include="quizzer\JavaScript.js" />
+    <Content Include="quizzer\style.css" />
     <Content Include="StyleSheet1.css" />
     <Content Include="template\template.html" />
     <Content Include="Web.config" />
@@ -93,7 +96,9 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
