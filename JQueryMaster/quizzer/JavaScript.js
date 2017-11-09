@@ -37,10 +37,26 @@
             var wrapper = next.find(".wrapper");
 
             wrapper.fadeIn("500", function () {
-
+                manageOptions(next);
             })
          };
 
+        this.manageOptions = function (next) {
+            var options = next.find(".options");
+            var childrens = options.find("div")
+            var counter = 0;
+
+            childrens.each(function (i, element) {
+                $(element).delay(counter).fadeIn(300);
+                counter += 500;
+            });
+
+            childrens.on("click", function () {
+                childrens.removeClass("active");
+                next.addClass("valid");
+                $(this).addClass("active");
+            });
+        };
 
         loadQuiz();
     })()
