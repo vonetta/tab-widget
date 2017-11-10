@@ -84,7 +84,7 @@ cursor: pointer;
     color: #f44336;
     font-weight: bold;
     text-align: center;
-    /*display:none;*/
+    display:none;
 }
 
 .progress {
