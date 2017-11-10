@@ -60,8 +60,10 @@
         };
 
         this.listenNext = function () {
-            $(".next_questions").on("click", function () {
+            $(".next_question").on("click", function () {
                 var next = $(this).data("next");
+
+                showPanel(next)
 
             });
         }
