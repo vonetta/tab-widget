@@ -10,6 +10,7 @@
 
             $(".start_quiz").on("click", function () {
                 showPanel(1);
+                listenNext();
             });
         };
 
@@ -57,6 +58,18 @@
                 $(this).addClass("active");
             });
         };
+
+        this.listenNext = function () {
+            $(".next_questions").on("click", function () {
+                var next = $(this).data("next");
+
+            });
+        }
+
+
+
+
+
 
         loadQuiz();
     })()
