@@ -62,11 +62,28 @@
         this.listenNext = function () {
             $(".next_question").on("click", function () {
                 var next = $(this).data("next");
-
+    
+                if (validateSelection($(this))){
                 showPanel(next)
+                }
 
             });
-        }
+        };
+
+        this.validateSelection = function ($this) {
+            var parent = $this.parents().eq(1);
+
+            if (parent.hasClass("valid")) {
+                return true;
+            }
+
+            else {
+                $(".error").fadeIn("300", function () {
+                    $(this).delay(500).fadeOut("300");
+                })
+                return false;
+            }
+        };
 
 
 
