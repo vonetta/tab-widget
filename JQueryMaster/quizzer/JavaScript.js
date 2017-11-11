@@ -1,6 +1,9 @@
 ﻿$(document).ready(function () {
 
     (function startQuiz() {
+        this.settings = {
+            results: []
+        };
 
         this.loadQuiz = function () {
 
@@ -64,9 +67,9 @@
                 var next = $(this).data("next");
     
                 if (validateSelection($(this))){
-                showPanel(next)
+                    showPanel(next);
+                    showProgressAndStore(next);
                 }
-
             });
         };
 
@@ -85,7 +88,21 @@
             }
         };
 
+        this.showProgressAndStore = function (panel) {
+            $(".progress .bar").animate({
+                "width": "+=25%"
+            }, 250);
 
+            var options = $("div[data-panel='" + (panel - 1) + "']").find(".options");
+            options.find("div").each(function (i,e) {
+                if ($(this).hasClass("active")) {
+                    settings.results.push($(this).text());
+                    console.log(settings.results)
+
+                }
+            })
+
+        };
 
 
 
