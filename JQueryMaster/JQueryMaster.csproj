@@ -83,6 +83,8 @@
     <Content Include="jQueryUI\index.html" />
     <Content Include="jQueryUI\main.js" />
     <Content Include="jQueryUI\style.css" />
+    <Content Include="osomMovies\index.html" />
+    <Content Include="osomMovies\script.js" />
     <Content Include="overlay\overlay.css" />
     <Content Include="overlay\overlay.html" />
     <Content Include="overlay\overlay.js" />
