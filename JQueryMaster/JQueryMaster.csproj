@@ -66,6 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="osomMovies\movies.json" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -85,6 +86,7 @@
     <Content Include="jQueryUI\style.css" />
     <Content Include="osomMovies\index.html" />
     <Content Include="osomMovies\script.js" />
+    <Content Include="osomMovies\style.css" />
     <Content Include="overlay\overlay.css" />
     <Content Include="overlay\overlay.html" />
     <Content Include="overlay\overlay.js" />

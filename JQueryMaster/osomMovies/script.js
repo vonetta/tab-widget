@@ -1,7 +1,17 @@
 ﻿var osomMovie = {};
 
+osomMovie.database = [];
+
+osomMovie.loadAssets = function () {
+    $.getJSON("movies.json", function (data) {
+        osomMovie.database = data;
+        osomMovie.init();
+    });
+};
+
 osomMovie.init = function () {
     osomMovie.filterSlider();
+    osomMovie.getTypes();
 };
 
 osomMovie.filterSlider = function () {
@@ -22,4 +32,20 @@ osomMovie.filterSlider = function () {
     })
 };
 
-osomMovie.init();
+
+osomMovie.getTypes = function () {
+    var types = [];
+
+    $.each(osomMovie.database, function (index, element) {
+
+        if ($.inArray(osomMovie.database[index].type, types)) {
+        var typeValue = osomMovie.database[index].type;
+        types.push(typeValue);
+        $("#categories").append('<option value="' + typeValue + '">' + typeValue + '</option>');
+        }
+    });
+
+
+};
+
+osomMovie.loadAssets();
