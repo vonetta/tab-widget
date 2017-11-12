@@ -12,6 +12,7 @@ osomMovie.loadAssets = function () {
 osomMovie.init = function () {
     osomMovie.filterSlider();
     osomMovie.getTypes();
+    osomMovie.getDirectors();
 };
 
 osomMovie.filterSlider = function () {
@@ -44,6 +45,20 @@ osomMovie.getTypes = function () {
         $("#categories").append('<option value="' + typeValue + '">' + typeValue + '</option>');
         }
     });
+
+    osomMovie.getDirectors = function () {
+        var db = osomMovie.database;
+        var directors = [];
+
+        $.each(db, function (index, element) {
+
+            if ($.inArray(db[index].director, directors)) {
+                var directorValue = db[index].director;
+                directors.push(directorValue);
+                $("#directors").append('<option value="' + directorValue + '">' + directorValue + '</option>');
+            }
+        })
+    }
 
 
 };
