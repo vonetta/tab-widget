@@ -13,6 +13,7 @@ osomMovie.init = function () {
     osomMovie.filterSlider();
     osomMovie.getTypes();
     osomMovie.getDirectors();
+    osomMovie.generateMarkup();
 };
 
 osomMovie.filterSlider = function () {
@@ -60,7 +61,38 @@ osomMovie.getTypes = function () {
         })
     }
 
+    osomMovie.generateMarkup = function () {
+        var template = '';
 
-};
+        $.each(osomMovie.database, function (index) {
+            var db = osomMovie.database;
 
-osomMovie.loadAssets();
+            template += '<div class="movie_item">';
+            template += ' <div class="header">';
+            template += '<div class="left">';
+            template += '<img src="images/movies/' + db[index].img +'" />';
+            template += ' </div>';
+            template += ' <div class="right">';
+            template += '<h3>'+db[index].title+'</h3>';
+            template += ' <div class="node">';
+            template += ' <span>Year:</span> ' + db[index].year;
+            template += ' </div>';
+            template += ' <div class="node">';
+            template += '<span>Director:</span> '+ db[index].director;
+            template += ' </div>';
+            template += ' <div class="node">';
+            template += ' <span>Type:</span> ' + db[index].type;
+            template += ' </div>';
+            template += ' <div class="show_desc">See descrition</div>';
+            template += ' </div>';
+            template += ' </div>';
+            template += ' <div class="description">';
+            template += ' <strong>Description</strong> ' + db[index].desc;
+            template += ' </div>';
+            template += ' </div>';
+        });
+        $(".movies_content").append(template);
+    }
+    };
+
+    osomMovie.loadAssets();
