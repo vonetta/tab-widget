@@ -92,7 +92,25 @@ osomMovie.getTypes = function () {
             template += ' </div>';
         });
         $(".movies_content").append(template);
+        osomMovie.showDescription();
     }
-    };
+};
+
+osomMovie.showDescription = function () {
+    $(".show_desc").on("click", function () {
+        var $this = $(this);
+        var parent = $(this).parents().eq(2);
+        var element = parent.find(".description");
+        element.slideToggle(200, function () {
+            if ($this.hasClass("active")) {
+                $this.text("See Description").removeClass("active")
+
+            }
+            else {
+                $this.text("Hide Description").addClass("active")
+            }
+        });
+    });
+}
 
     osomMovie.loadAssets();
