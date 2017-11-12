@@ -67,7 +67,7 @@ osomMovie.getTypes = function () {
         $.each(osomMovie.database, function (index) {
             var db = osomMovie.database;
 
-            template += '<div class="movie_item">';
+            template += '<div class="movie_item" data-id="'+db[index].id+'">';
             template += ' <div class="header">';
             template += '<div class="left">';
             template += '<img src="images/movies/' + db[index].img +'" />';
@@ -93,6 +93,7 @@ osomMovie.getTypes = function () {
         });
         $(".movies_content").append(template);
         osomMovie.showDescription();
+        osomMovie.startFilter();
     }
 };
 
@@ -112,5 +113,44 @@ osomMovie.showDescription = function () {
         });
     });
 }
+
+osomMovie.startFilter = function () {
+    $("select").on("change", function () {
+        var db = osomMovie.database;
+        var type = $("#categories").val();
+        var director = $("#directors").val();
+
+        var results = [];
+
+        $.each(db, function (index) {
+            if (db[index].type === type) {
+                results.push(db[index].id);
+            }
+
+            if (db[index].director === director) {
+                results.push(db[index].director);
+            }
+        })
+   
+
+        if (results.length < 1){
+            $(".movie_item").show();
+        } else {
+            var uniqueArray = [];
+
+            $.each(results, function (index, value) {
+                if ($.inArray(value, uniqueArray) == -1) {
+                    uniqueArray.push(value)
+                }
+            });
+
+            $(".movie_item").hide();
+            $.each(uniqueArray, function (i, value) {
+                $("div[data-id='" +  value+ "']").show();
+            })
+        }
+
+    });
+};
 
     osomMovie.loadAssets();
