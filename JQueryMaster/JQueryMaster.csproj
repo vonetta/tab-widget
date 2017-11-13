@@ -66,6 +66,18 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="osomMovies\images\movies\1.jpg" />
+    <Content Include="osomMovies\images\movies\10.jpg" />
+    <Content Include="osomMovies\images\movies\11.jpg" />
+    <Content Include="osomMovies\images\movies\12.jpg" />
+    <Content Include="osomMovies\images\movies\2.jpg" />
+    <Content Include="osomMovies\images\movies\3.jpg" />
+    <Content Include="osomMovies\images\movies\4.jpg" />
+    <Content Include="osomMovies\images\movies\5.jpg" />
+    <Content Include="osomMovies\images\movies\6.jpg" />
+    <Content Include="osomMovies\images\movies\7.jpg" />
+    <Content Include="osomMovies\images\movies\8.jpg" />
+    <Content Include="osomMovies\images\movies\9.jpg" />
     <Content Include="osomMovies\movies.json" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
@@ -100,9 +112,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="NewFolder1\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
